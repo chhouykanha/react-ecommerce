@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const ProductCard = ({data}) => {
   return (
     <div key={data.id} className="space-y-4 group hover:scale-105 transition-all duration-300">
-              <div className="w-full h-[300px] bg-gray-50 overflow-hidden relative bg-transparent">
+              <div className="w-full h-[200px] lg:h-[300px] bg-gray-50 overflow-hidden relative bg-transparent">
                 <Link to={`/product/${data.id}`}>
                     <img
                     className="w-full p-5 h-full object-center bg-cover group-hover:scale-110 transition-all duration-300"
