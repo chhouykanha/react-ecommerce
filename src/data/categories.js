@@ -1,7 +1,7 @@
-import img01 from '../assets/images/cat_01.jpg'
-import img02 from '../assets/images/cat_02.jpg'
-import img03 from '../assets/images/cat_03.jpg'
-import img04 from '../assets/images/cat_04.jpg'
+import img01 from '../../assets/images/cat_01.jpg'
+import img02 from '../../assets/images/cat_02.jpg'
+import img03 from '../../assets/images/cat_03.jpg'
+import img04 from '../../assets/images/cat_04.jpg'
 const categories = [
      {
         id: 1,
