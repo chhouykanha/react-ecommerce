@@ -1,4 +1,4 @@
-
+import aboutus from '../assets/images/about_us.jpg'
 const AboutPage = () => {
   return (
     <div>
@@ -17,7 +17,7 @@ const AboutPage = () => {
         <div className="w-full h-full overflow-hidden">
           <img
             className="rounded-xl"
-            src="/src/assets/images/about_us.jpg"
+            src={aboutus}
             alt=""
           />
         </div>
