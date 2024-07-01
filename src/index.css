@@ -4,10 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    overflow-x: hidden;
+}
 
 @layer components{
     .form-input{
         @apply  py-2 px-3 border focus:outline-none  transition duration-200 ease-in-out w-full text-sm border-slate-200  shadow-sm rounded-md placeholder:text-slate-400/90 focus:ring-4 focus:ring-slate-500 focus:ring-opacity-20 focus:border-slate-500 focus:border-opacity-40;
     }
+    
 }
