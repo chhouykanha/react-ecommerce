@@ -1,34 +1,32 @@
+import img01 from '../assets/images/cat_01.jpg'
+import img02 from '../assets/images/cat_02.jpg'
+import img03 from '../assets/images/cat_03.jpg'
+import img04 from '../assets/images/cat_04.jpg'
 const categories = [
      {
         id: 1,
         name: 'Shirts',
         qty: 3,
-        url: '/src/assets/images/cat_01.jpg'
+        url: img01
      },
      {
         id: 2,
         name: 'Kids',
         qty: 10,
-        url: '/src/assets/images/cat_02.jpg'
+        url: img02
      },
      {
         id: 4,
         name: 'Skirts',
         qty: 8,
-        url: '/src/assets/images/cat_03.jpg'
+        url: img03
      },
      {
         id: 5,
         name: 'Womens',
         qty: 4,
-        url: '/src/assets/images/cat_04.jpg'
+        url: img04
      },
-    //  {
-    //     id: 6,
-    //     name: 'Mens',
-    //     qty: 9,
-    //     url: '/src/assets/images/cat_05.jpg'
-    //  },
 ]
 
 export default categories;
