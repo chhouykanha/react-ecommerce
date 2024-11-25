@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { CiDeliveryTruck } from "react-icons/ci";
 import { FiPlus } from "react-icons/fi";
 import { IoChevronForward } from "react-icons/io5";
-import { LiaShipSolid } from "react-icons/lia";
 import { LuMinus } from "react-icons/lu";
 import { Link, useParams } from "react-router-dom"
 import LoadingIcon from "../components/LoadingIcon";
@@ -87,30 +85,6 @@ const Product = () => {
                                 Buy Now
                             </button>
                       </div>
-
-                      <div className="mt-6 p-4 text-sm rounded-md bg-gray-50 grid grid-cols-12 items-center space-x-2">
-                            <p className="col-span-4">Secure checkout with</p>
-                            <span className="col-span-8">
-                                <img className="w-[80%] object-contain" src="/src/assets/images/payment.webp" alt="payment" />
-                            </span>
-                      </div>
-
-                      <div className="mt-6 flex space-x-2 items-center text-gray-700">
-                            <span className="text-2xl">
-                                <CiDeliveryTruck />
-                            </span>
-                            <span>
-                              Delivers in: 3-7 Working Days
-                            </span>
-                      </div>
-                      <div className="mt-4 flex space-x-2 items-center text-gray-700">
-                            <span className="text-2xl font-light">
-                              <LiaShipSolid />
-                            </span>
-                            <span>
-                              Free shipping over $300
-                            </span>
-                      </div>  
 
                       <hr className="h-[1px]  bg-gray-50 w-full my-4" />
 

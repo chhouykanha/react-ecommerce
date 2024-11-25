@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import CategoryCard from "../components/CategoryCard";
-import categories from "../data/categories";
+import Slide02 from "../assets/images/slide_02.jpg";
 import ProductCard from "../components/ProductCard";
 import LoadingIcon from "../components/LoadingIcon";
 import { Link } from "react-router-dom";
@@ -21,19 +20,27 @@ const HomePage = () => {
   }, []);
 
   return (
+
+    <>
+     <div
+        style={{ backgroundImage: `url(${Slide02})` }}
+        className="min-h-screen font-jost flex items-center bg-no-repeat bg-center bg-cover  lg:bg-contain  bg-secondary"
+      >
+            <div className="flex flex-col gap-4 px-8 lg:px-40">
+                    <h3 className="text-xl font-semibold">New Collection</h3>
+                    <h1 className="text-6xl font-bold">
+                    Luxury Without
+                    <br />
+                    Labels
+                    </h1>
+                    <p className="text-base">Explore new-in product and best sellers</p>
+                    <button className="bg-primary font-semibold text-sm text-white px-10 py-3 rounded-lg w-fit">View Collection</button>
+            </div>
+
+      </div>
+    
     <main className="max-w-[90%] lg:max-w-[70%] mx-auto font-jost">
-      <section className="mt-20">
-        <div>
-          <h2 className="text-3xl font-bold">Shop by Categories</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-8">
-          {categories.map((item) => (
-            <CategoryCard key={item.id} data={item} />
-          ))}
-        </div>
-      </section>
-
+ 
       <section className="mt-20">
         <h2 className="text-3xl text-center font-semibold">Best Sellers</h2>
         <p className="text-center text-lg mt-2 mb-5 text-gray-600">
@@ -41,7 +48,7 @@ const HomePage = () => {
         </p>
         {!isLoading && (
           <>
-            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8 mt-8">
               {products.map((item) => (
                 <ProductCard key={item.id} data={item} />
               ))}
@@ -65,6 +72,7 @@ const HomePage = () => {
         )}
       </section>
     </main>
+    </>
   );
 };
 

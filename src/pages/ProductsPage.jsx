@@ -82,23 +82,11 @@ const ProductsPage = () => {
 
       {!isLoading && (
         <>
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 mt-8">
             {products.map((item) => (
               <ProductCard key={item.id} data={item} />
             ))}
           </div>
-
-          {/* <div className="grid place-items-center my-10">
-                <div className="flex justify-center space-x-3 items-center">
-                    <button className="w-20 px-3 py-2 border border-gray-200 rounded-md hover:bg-gray-200">
-                        Prev
-                    </button>
-                    <button className="w-10 px-3 py-2 border border-gray-200 rounded-md">1</button>
-                    <button className="w-20 px-3 py-2 border border-gray-200 rounded-md hover:bg-gray-200">
-                        Next
-                    </button>
-                </div>
-          </div> */}
         </>
       )}
 

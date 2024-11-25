@@ -2,16 +2,6 @@ import aboutus from '../assets/images/about_us.jpg'
 const AboutPage = () => {
   return (
     <div>
-      <section className="bg-fixed grid relative  bg-[url('/src/assets/images/banner.jpg')] h-[300px] lg:h-[400px] bg-center"> 
-        <div className="w-full grid place-items-center text-center">
-          <div>
-            <p className=" text-base lg:text-xl text-white font-normal mb-10">
-              Home | About
-            </p>
-            <h1 className="text-white font-bold text-4xl">About Us</h1>
-          </div>
-        </div>
-      </section>
 
       <section className="max-w-[90%] font-jost lg:max-w-[70%] mx-auto my-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="w-full h-full overflow-hidden">
