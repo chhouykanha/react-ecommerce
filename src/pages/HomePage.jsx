@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Slide02 from "../assets/images/slide_02.jpg";
 import ProductCard from "../components/ProductCard";
 import LoadingIcon from "../components/LoadingIcon";
 import { Link } from "react-router-dom";
@@ -23,20 +22,16 @@ const HomePage = () => {
 
     <>
      <div
-        style={{ backgroundImage: `url(${Slide02})` }}
-        className="min-h-screen font-jost flex items-center bg-no-repeat bg-center bg-cover  lg:bg-contain  bg-secondary"
+        className="min-h-screen font-jost flex items-center justify-center bg-no-repeat bg-center bg-cover bg-secondary"
       >
-            <div className="flex flex-col gap-4 px-8 lg:px-40">
+            <div className="flex flex-col items-center gap-4 px-8 ">
                     <h3 className="text-xl font-semibold">New Collection</h3>
-                    <h1 className="text-6xl font-bold">
-                    Luxury Without
-                    <br />
-                    Labels
+                    <h1 className="text-4xl font-bold">
+                    Luxury Without Labels
                     </h1>
                     <p className="text-base">Explore new-in product and best sellers</p>
                     <button className="bg-primary font-semibold text-sm text-white px-10 py-3 rounded-lg w-fit">View Collection</button>
             </div>
-
       </div>
     
     <main className="max-w-[90%] lg:max-w-[70%] mx-auto font-jost">

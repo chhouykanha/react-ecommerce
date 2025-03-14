@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CiSearch } from "react-icons/ci";
+// import { CiSearch } from "react-icons/ci";
 import ProductCard from "../components/ProductCard";
 import LoadingIcon from "../components/LoadingIcon";
 
@@ -7,8 +7,8 @@ const ProductsPage = () => {
   const uri = "https://fakestoreapi.com/products";
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchText, setSearchText] = useState("");
-  const [filterProduct, setFilterProduct] = useState("_name_asc");
+  // const [searchText, setSearchText] = useState("");
+  // const [filterProduct, setFilterProduct] = useState("_name_asc");
   
   const fetchAllProducts = async () => {
     setIsLoading(true);
@@ -18,39 +18,39 @@ const ProductsPage = () => {
     setIsLoading(false);
   };
 
-  const fetchProductBy = async (sort) => {
-    setIsLoading(true);
-    const res = await fetch(`${uri}?sort=${sort}`);
-    const result = await res.json();
-    setProducts(result);
-    setIsLoading(false);
-  }
+  // const fetchProductBy = async (sort) => {
+  //   setIsLoading(true);
+  //   const res = await fetch(`${uri}?sort=${sort}`);
+  //   const result = await res.json();
+  //   setProducts(result);
+  //   setIsLoading(false);
+  // }
 
   useEffect(() => {
     fetchAllProducts();
   }, []);
 
-  useEffect(() => {
-    if (searchText === ""){
-      fetchAllProducts()
-      return;
-    }
-    const filterBySearch = products.filter((item) => {
-      if (item.title.toLowerCase().includes(searchText.toLowerCase())) {
-        return item;
-      }
-    });
-    setProducts(filterBySearch);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchText]);
+  // useEffect(() => {
+  //   if (searchText === ""){
+  //     fetchAllProducts()
+  //     return;
+  //   }
+  //   const filterBySearch = products.filter((item) => {
+  //     if (item.title.toLowerCase().includes(searchText.toLowerCase())) {
+  //       return item;
+  //     }
+  //   });
+  //   setProducts(filterBySearch);
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [searchText]);
 
-  useEffect(() => {
-        if(filterProduct === '_name_asc'){
-            fetchProductBy('asc')
-        }else if(filterProduct === '_name_desc'){
-            fetchProductBy('desc')
-        }
-  },[filterProduct])
+  // useEffect(() => {
+  //       if(filterProduct === '_name_asc'){
+  //           fetchProductBy('asc')
+  //       }else if(filterProduct === '_name_desc'){
+  //           fetchProductBy('desc')
+  //       }
+  // },[filterProduct])
 
   return (
     <div className="max-w-[90%] lg:max-w-[70%] mx-auto my-4 font-jost">
@@ -58,7 +58,7 @@ const ProductsPage = () => {
         <p className="text-3xl font-normal">ALL PRODUCTS</p>
       </div>
 
-      <div className="flex justify-between items-center">
+      {/* <div className="flex justify-between items-center">
         <div>
           <select onChange={(e) => setFilterProduct(e.target.value)} className="px-4 py-1.5 border cursor-pointer border-slate-200 rounded-md">
             <option value="_name_asc">Latest</option>
@@ -78,7 +78,7 @@ const ProductsPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {!isLoading && (
         <>

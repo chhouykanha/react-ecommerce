@@ -81,9 +81,9 @@ const Product = () => {
                             <button className="w-32 text-sm font-medium rounded-md bg-gray-600 text-white py-2 hover:bg-gray-500 transition-all duration-300">
                                 Add to cart
                             </button>
-                            <button className="w-32 text-sm font-medium rounded-md bg-yellow-600 text-white py-2 hover:bg-yellow-500 transition-all duration-300">
+                            {/* <button className="w-32 text-sm font-medium rounded-md bg-yellow-600 text-white py-2 hover:bg-yellow-500 transition-all duration-300">
                                 Buy Now
-                            </button>
+                            </button> */}
                       </div>
 
                       <hr className="h-[1px]  bg-gray-50 w-full my-4" />
